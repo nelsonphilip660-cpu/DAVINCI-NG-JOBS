@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Jobs | DavinciJobs</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .jobs-header {
+            padding: 65px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #251750, #101428);
+        }
+
+        .jobs-header h1 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .jobs-header p {
+            color: #a6abc0;
+        }
+
+        .jobs-search {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 12px;
+        }
+
+        .jobs-search input,
+        .jobs-search select {
+            flex: 1;
+            min-width: 0;
+            padding: 15px;
+            border-radius: 8px;
+            background: #121629;
+            border: 1px solid rgba(255, 255, 255, .1);
+            color: white;
+        }
+
+        .jobs-search button {
+            background: #7545e8;
+            color: white;
+            padding: 14px 25px;
+            border-radius: 8px;
+        }
+
+        .jobs-container {
+            max-width: 1200px;
+            padding: 30px 20px 80px;
+            margin: auto;
+        }
+
+        .jobs-container h2 {
+            margin-bottom: 25px;
+        }
+
+        #jobsList {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .job-card {
+            background: #121629;
+            border: 1px solid rgba(255, 255, 255, .1);
+            padding: 25px;
+            border-radius: 14px;
+        }
+
+        .job-card button {
+            margin-top: 18px;
+            padding: 12px 18px;
+            border-radius: 8px;
+            background: #7545e8;
+            color: white;
+        }
+
+        #jobsMessage {
+            color: #a6abc0;
+            margin: 20px 0;
+        }
+
+        @media(max-width: 750px) {
+            #jobsList {
+                grid-template-columns: 1fr;
+            }
+
+            .jobs-search {
+                flex-direction: column;
+            }
+
+            .jobs-header h1 {
+                font-size: 29px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                DAVINCI<span>JOBS</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="jobs.html">Find Jobs</a>
+                <a href="subscription.html">Subscription</a>
+                <a href="login.html">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="jobs-header">
+        <h1>Find Your Next Opportunity</h1>
+        <p>Discover jobs from employers across Nigeria.</p>
+    </section>
+
+    <form class="jobs-search" id="jobSearchForm">
+
+        <input type="text" id="jobKeyword" placeholder="Job title or keyword">
+
+        <input type="text" id="jobLocation" placeholder="Location e.g. Lagos">
+
+        <select id="jobCategory">
+            <option value="">All Categories</option>
+            <option value="Technology">Technology</option>
+            <option value="Healthcare">Healthcare</option>
+            <option value="Finance">Finance</option>
+            <option value="Education">Education</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Sales">Sales</option>
+        </select>
+
+        <button type="submit">Search</button>
+
+    </form>
+
+    <main class="jobs-container">
+
+        <h2>Available Opportunities</h2>
+
+        <p id="jobsMessage">Loading available jobs...</p>
+
+        <div id="jobsList"></div>
+
+    </main>
+
+    <footer>
+        <p class="copyright">
+            © 2026 DavinciJobs. All rights reserved.
+        </p>
+    </footer>
+
+    <script type="module" src="js/jobs.js"></script>
+
+</body>
+
+</html>

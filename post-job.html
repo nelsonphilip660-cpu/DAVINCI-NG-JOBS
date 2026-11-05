@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Job | DavinciJobs</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .post-job-container {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #121629;
+            border: 1px solid #292e48;
+            border-radius: 18px;
+        }
+
+        .post-job-container h1 {
+            text-align: center;
+            color: #f5c451;
+        }
+
+        .post-job-container p {
+            text-align: center;
+            color: #a6abc0;
+            margin-bottom: 25px;
+        }
+
+        .job-form label {
+            display: block;
+            margin: 16px 0 7px;
+            color: white;
+        }
+
+        .job-form input,
+        .job-form textarea,
+        .job-form select {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #363b55;
+            background: #090b16;
+            color: white;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .job-form textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .job-form button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 14px;
+            background: #7545e8;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #jobMessage {
+            text-align: center;
+            margin-top: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">DAVINCI<span>JOBS</span></a>
+
+        <nav id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="jobs.html">Find Jobs</a>
+            <a href="company.html">Register Company</a>
+            <a href="employer-dashboard.html">Employer Dashboard</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <main class="post-job-container">
+
+        <h1>Post a New Job</h1>
+
+        <p>Find the right candidates for your company.</p>
+
+        <form id="postJobForm" class="job-form">
+
+            <label for="jobTitle">Job Title</label>
+            <input type="text" id="jobTitle" placeholder="e.g. Frontend Developer" required>
+
+            <label for="jobCompany">Company Name</label>
+            <input type="text" id="jobCompany" placeholder="Enter your company name" required>
+
+            <label for="jobLocation">Job Location</label>
+            <input type="text" id="jobLocation" placeholder="e.g. Ikeja, Lagos" required>
+
+            <label for="jobCategory">Job Category</label>
+            <select id="jobCategory" required>
+                <option value="">Select category</option>
+                <option>Technology</option>
+                <option>Education</option>
+                <option>Healthcare</option>
+                <option>Finance</option>
+                <option>Engineering</option>
+                <option>Marketing</option>
+                <option>Customer Service</option>
+                <option>Administration</option>
+                <option>Sales</option>
+                <option>Other</option>
+            </select>
+
+            <label for="jobType">Employment Type</label>
+            <select id="jobType" required>
+                <option value="">Select employment type</option>
+                <option>Full-time</option>
+                <option>Part-time</option>
+                <option>Contract</option>
+                <option>Remote</option>
+                <option>Internship</option>
+            </select>
+
+            <label for="jobSalary">Salary</label>
+            <input type="text" id="jobSalary" placeholder="e.g. ₦150,000 - ₦250,000 monthly">
+
+            <label for="jobDescription">Job Description</label>
+            <textarea id="jobDescription" placeholder="Describe the job responsibilities..." required></textarea>
+
+            <label for="jobRequirements">Requirements</label>
+            <textarea id="jobRequirements" placeholder="Enter qualifications and requirements..." required></textarea>
+
+            <label for="jobDeadline">Application Deadline</label>
+            <input type="date" id="jobDeadline" required>
+
+            <button type="submit" id="postJobButton">
+                Submit Job for Approval
+            </button>
+
+            <p id="jobMessage"></p>
+
+        </form>
+
+    </main>
+
+    <script type="module" src="js/post-job.js"></script>
+
+</body>
+
+</html>

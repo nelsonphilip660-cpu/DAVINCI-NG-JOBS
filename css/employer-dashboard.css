@@ -1,0 +1,23 @@
+.employer-dashboard-page { min-height: 100vh; }
+.dashboard-nav { max-width: 1240px; }
+.dashboard-nav-links { display: flex; align-items: center; gap: 24px; color: var(--gray); font-size: 13px; }
+.dashboard-nav-links a:hover { color: var(--gold); }
+.logout-button { color: var(--white); background: transparent; font: inherit; }
+.employer-dashboard { width: min(1160px, 92%); margin: 0 auto; padding: 54px 0 80px; }
+.dashboard-heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 28px; }
+.dashboard-eyebrow { color: var(--gold); font-size: 10px; font-weight: 800; letter-spacing: 1.8px; }
+.dashboard-heading h1 { margin: 8px 0; font-size: clamp(28px, 4vw, 42px); }
+.dashboard-heading p,.listings-heading a { color: var(--gray); font-size: 13px; }
+.dashboard-message { margin: 20px 0; padding: 15px 18px; border: 1px solid var(--border); border-radius: 12px; background: rgba(18,22,41,.75); color: #d9d9e5; font-size: 13px; }
+.dashboard-message a { color: var(--gold); font-weight: 700; }
+.company-panel { display: flex; align-items: center; gap: 14px; padding: 18px 20px; margin-bottom: 18px; background: #121629; border: 1px solid var(--border); border-radius: 14px; }
+.company-panel[hidden],.dashboard-stats[hidden] { display: none; }
+.company-avatar { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 12px; color: white; background: linear-gradient(135deg,var(--purple),#a174ff); font-size: 18px; font-weight: 800; }
+.company-panel strong { font-size: 14px; }.company-panel p { color: var(--gray); font-size: 11px; margin-top: 3px; text-transform: capitalize; }.company-panel p span { color: var(--gold); }
+.dashboard-stats { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; margin-bottom: 48px; }
+.dashboard-stats article { padding: 20px; border-radius: 14px; border: 1px solid var(--border); background: linear-gradient(145deg,#171b35,#101428); }
+.dashboard-stats article span { display: block; color: var(--gray); font-size: 12px; }.dashboard-stats article strong { display: block; margin-top: 8px; font-size: 27px; color: var(--white); text-transform: capitalize; }.dashboard-stats article .stat-status { color: var(--gold); font-size: 18px; }
+.listings-heading { display: flex; justify-content: space-between; align-items: end; gap: 20px; margin-bottom: 18px; }.listings-heading h2 { margin-top: 5px; font-size: 24px; }.listings-heading a { color: var(--gold); }
+.employer-jobs { display: grid; gap: 12px; }.employer-job-card { padding: 20px; background: #121629; border: 1px solid var(--border); border-radius: 14px; }.job-card-top,.job-card-bottom { display: flex; justify-content: space-between; align-items: center; gap: 16px; }.employer-job-card h3 { margin: 8px 0 3px; font-size: 17px; }.employer-job-card p,.job-card-bottom>span { color: var(--gray); font-size: 11px; }.job-status { display: inline-block; padding: 4px 8px; border-radius: 30px; background: rgba(245,196,81,.12); color: var(--gold); text-transform: capitalize; font-size: 9px; font-weight: 700; }.job-status.status-approved { background: rgba(46,204,113,.13); color: #55d68a; }.applicant-count { color: var(--gold); font-size: 20px; font-weight: 800; text-align: center; }.applicant-count small { display: block; color: var(--gray); font-size: 10px; font-weight: 500; }.job-card-bottom { margin-top: 15px; padding-top: 13px; border-top: 1px solid var(--border); }.view-applicants { color: white; font-size: 12px; font-weight: 700; }.view-applicants:hover { color: var(--gold); }
+.empty-listings { padding: 38px 22px; text-align: center; border: 1px dashed rgba(255,255,255,.17); border-radius: 14px; }.empty-listings p { margin: 8px 0 18px; color: var(--gray); font-size: 12px; }
+@media(max-width:650px){.employer-dashboard{padding-top:35px}.dashboard-nav-links{gap:12px;font-size:11px}.dashboard-heading{align-items:flex-start;flex-direction:column}.dashboard-heading .btn{width:100%}.dashboard-stats{gap:8px}.dashboard-stats article{padding:13px}.dashboard-stats article span{font-size:10px}.dashboard-stats article strong{font-size:21px}.dashboard-stats article .stat-status{font-size:14px}.listings-heading{align-items:flex-start;flex-direction:column}.employer-job-card{padding:15px}.job-card-top{align-items:flex-start}.applicant-count{font-size:17px}.job-card-bottom{align-items:flex-start;flex-direction:column}.job-card-bottom .view-applicants{align-self:flex-end}}

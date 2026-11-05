@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Company | DavinciJobs</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .company-container {
+            max-width: 650px;
+            margin: 60px auto;
+            padding: 30px;
+            background: #121629;
+            border: 1px solid #292e48;
+            border-radius: 18px;
+        }
+
+        .company-container h1 {
+            text-align: center;
+            color: #f5c451;
+            margin-bottom: 10px;
+        }
+
+        .company-container p {
+            text-align: center;
+            color: #a6abc0;
+            margin-bottom: 25px;
+        }
+
+        .company-form label {
+            display: block;
+            margin: 16px 0 7px;
+            color: #fff;
+        }
+
+        .company-form input,
+        .company-form textarea,
+        .company-form select {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #363b55;
+            background: #090b16;
+            color: white;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .company-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .company-form button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 14px;
+            background: #7545e8;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #companyMessage {
+            text-align: center;
+            margin-top: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">DAVINCI<span>JOBS</span></a>
+
+        <nav id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="jobs.html">Find Jobs</a>
+            <a href="subscription.html">Subscription</a>
+            <a href="employer-dashboard.html">Employer Dashboard</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <main class="company-container">
+
+        <h1>Register Your Company</h1>
+
+        <p>
+            Create your company profile to start recruiting qualified workers.
+        </p>
+
+        <form id="companyForm" class="company-form">
+
+            <label for="companyName">Company Name</label>
+            <input type="text" id="companyName" placeholder="Enter company name" required>
+
+            <label for="companyEmail">Business Email</label>
+            <input type="email" id="companyEmail" placeholder="Enter business email" required>
+
+            <label for="companyPhone">Phone Number</label>
+            <input type="tel" id="companyPhone" placeholder="Enter phone number" required>
+
+            <label for="companyLocation">Company Location</label>
+            <input type="text" id="companyLocation" placeholder="e.g. Lekki, Lagos" required>
+
+            <label for="companyIndustry">Industry</label>
+            <select id="companyIndustry" required>
+                <option value="">Select industry</option>
+                <option>Technology</option>
+                <option>Education</option>
+                <option>Healthcare</option>
+                <option>Finance</option>
+                <option>Construction</option>
+                <option>Hospitality</option>
+                <option>Transportation</option>
+                <option>Retail</option>
+                <option>Manufacturing</option>
+                <option>Other</option>
+            </select>
+
+            <label for="companyWebsite">Company Website (Optional)</label>
+            <input type="url" id="companyWebsite" placeholder="https://example.com">
+
+            <label for="companyDescription">About Your Company</label>
+            <textarea id="companyDescription" placeholder="Describe your company and what it does..."
+                required></textarea>
+
+            <button type="submit" id="companySubmit">
+                Register Company
+            </button>
+
+            <p id="companyMessage"></p>
+
+        </form>
+
+    </main>
+
+    <script type="module" src="js/company.js"></script>
+
+</body>
+
+</html>

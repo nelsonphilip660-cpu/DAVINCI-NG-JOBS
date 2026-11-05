@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Employer dashboard for managing DavinciJobs listings and applicants.">
+  <title>Employer Dashboard | DavinciJobs</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/employer-dashboard.css">
+</head>
+<body class="employer-dashboard-page">
+  <header>
+    <nav class="navbar dashboard-nav">
+      <a href="index.html" class="logo">DAVINCI<span>JOBS</span></a>
+      <div class="dashboard-nav-links">
+        <a href="index.html">Home</a>
+        <a href="post-job.html">Post a Job</a>
+        <button id="logoutButton" class="logout-button" type="button">Log out</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="employer-dashboard">
+    <section class="dashboard-heading">
+      <div>
+        <span class="dashboard-eyebrow">EMPLOYER WORKSPACE</span>
+        <h1>Welcome to your dashboard</h1>
+        <p>Manage your job listings and review applicants in one place.</p>
+      </div>
+      <a class="btn primary-btn" href="post-job.html">＋ Post a Job</a>
+    </section>
+
+    <div id="dashboardMessage" class="dashboard-message" role="status">Loading your employer account…</div>
+    <section id="companyPanel" class="company-panel" hidden></section>
+    <section id="dashboardStats" class="dashboard-stats" hidden></section>
+
+    <section class="listings-section">
+      <div class="listings-heading">
+        <div><span class="dashboard-eyebrow">YOUR WORK</span><h2>Job listings</h2></div>
+        <a href="application.html">View all applicants →</a>
+      </div>
+      <div id="employerJobs" class="employer-jobs"></div>
+    </section>
+  </main>
+
+  <script type="module" src="js/employer-dashboard.js"></script>
+</body>
+</html>

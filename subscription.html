@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription | DavinciJobs</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .subscription-page {
+            max-width: 750px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+
+        .subscription-box {
+            background: #121629;
+            border: 1px solid rgba(255, 255, 255, .1);
+            border-radius: 18px;
+            padding: 30px;
+        }
+
+        .subscription-box h1,
+        .subscription-box h2 {
+            text-align: center;
+        }
+
+        .subscription-box p {
+            color: #a6abc0;
+            font-size: 14px;
+            margin: 12px 0;
+        }
+
+        .subscription-price {
+            color: #f5c451;
+            font-size: 40px;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .bank-details {
+            background: #090b16;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+
+        .bank-details p {
+            padding: 7px 0;
+        }
+
+        .upload-area {
+            border: 2px dashed #7545e8;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .upload-area input {
+            width: 100%;
+            margin-top: 15px;
+            color: white;
+        }
+
+        .subscription-box button {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        #receiptPreview {
+            max-width: 100%;
+            max-height: 250px;
+            margin-top: 15px;
+            display: none;
+            border-radius: 10px;
+        }
+
+        #paymentMessage {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        @media(max-width: 600px) {
+            .subscription-box {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                DAVINCI<span>JOBS</span>
+            </a>
+            <a href="jobs.html">Find Jobs</a>
+        </nav>
+    </header>
+
+    <main class="subscription-page">
+
+        <div class="subscription-box">
+
+            <h1>Unlock Your Career Opportunities</h1>
+
+            <p style="text-align:center">
+                Activate your DavinciJobs monthly membership.
+            </p>
+
+            <div class="subscription-price">
+                ₦2,000
+                <small style="font-size:15px;color:#a6abc0">
+                    / month
+                </small>
+            </div>
+
+            <h2>Bank Transfer Details</h2>
+
+            <div class="bank-details">
+
+                <p><strong>Bank Name:</strong> Opay</p>
+
+                <p><strong>Account Name:</strong> Nelson Philip</p>
+
+                <p><strong>Account Number:</strong> 9037141652</p>
+
+                <p><strong>Amount:</strong> ₦2,000</p>
+
+            </div>
+
+            <p>
+                Transfer the subscription amount to the account above.
+                Then upload your payment receipt below.
+            </p>
+
+            <form id="paymentForm">
+
+                <label for="payerName">Name of Account Holder</label>
+
+                <input type="text" id="payerName" placeholder="Enter account holder name" required
+                    style="width:100%;padding:13px;background:#090b16;color:white;border:1px solid #333;border-radius:8px">
+
+                <label for="receiptFile" style="display:block;margin-top:20px">
+                    Upload Payment Receipt
+                </label>
+
+                <div class="upload-area">
+
+                    <p>Select your payment receipt (Image or PDF)</p>
+
+                    <input type="file" id="receiptFile" accept="image/*,.pdf" required>
+
+                    <img id="receiptPreview" alt="Receipt preview">
+
+                </div>
+
+                <button type="submit" class="btn primary-btn" id="submitPayment">
+                    Submit Payment for Verification
+                </button>
+
+                <p id="paymentMessage"></p>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p class="copyright">
+            © 2026 DavinciJobs. All rights reserved.
+        </p>
+    </footer>
+
+    <script type="module" src="js/payment.js"></script>
+
+</body>
+
+</html>

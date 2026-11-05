@@ -1,0 +1,361 @@
+/* =====================================
+   DAVINCIJOBS APPLICATIONS PAGE
+   Premium Purple & Gold Theme
+===================================== */
+
+:root {
+    --app-bg: #090b16;
+    --app-card: #171a2e;
+    --app-purple: #7545e8;
+    --app-gold: #f5c451;
+    --app-white: #ffffff;
+    --app-text: #d8d8e5;
+    --app-muted: #9293a8;
+    --app-border: rgba(255,255,255,0.09);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--app-bg);
+    color: var(--app-white);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    background: rgba(9,11,22,0.97);
+    border-bottom: 1px solid var(--app-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+}
+
+.navbar .container {
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: var(--app-gold);
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.navbar nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.navbar nav a {
+    color: var(--app-text);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: var(--app-gold);
+}
+
+/* MAIN CONTENT */
+
+main.container {
+    padding-top: 55px !important;
+    padding-bottom: 60px !important;
+    min-height: 70vh;
+}
+
+main h1 {
+    font-size: clamp(28px, 5vw, 42px);
+    margin-bottom: 10px;
+}
+
+main > p {
+    color: var(--app-muted);
+    margin-bottom: 25px;
+}
+
+/* APPLICATION MESSAGE */
+
+#applicationsMessage {
+    color: var(--app-gold);
+    background: rgba(245,196,81,0.07);
+    border: 1px solid rgba(245,196,81,0.2);
+    padding: 16px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* APPLICATION LIST */
+
+#applicationsList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+/* JOB HEADING */
+
+#applicationsList h2 {
+    grid-column: 1 / -1;
+    color: var(--app-gold);
+    font-size: 23px;
+    margin: 25px 0 5px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(245,196,81,0.3);
+}
+
+/* APPLICATION CARDS */
+
+#applicationsList .job-card {
+    background: linear-gradient(145deg, #211638, #171025);
+    border: 1px solid rgba(245,196,81,0.22);
+    border-radius: 16px;
+    padding: 25px;
+    transition: 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: appFadeIn 0.6s ease;
+}
+
+#applicationsList .job-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--app-gold);
+    box-shadow: 0 12px 30px rgba(245,196,81,0.1);
+}
+
+#applicationsList .job-card h3 {
+    color: var(--app-white);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#applicationsList .job-card p {
+    color: var(--app-text);
+    font-size: 14px;
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+/* STATUS DROPDOWN */
+
+#applicationsList .job-card select {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: 1px solid #55436f;
+    background: #130d20;
+    color: var(--app-white);
+    outline: none;
+    cursor: pointer;
+}
+
+#applicationsList .job-card select:focus {
+    border-color: var(--app-gold);
+}
+
+/* UPDATE BUTTON */
+
+#applicationsList .job-card button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    background: linear-gradient(135deg, var(--app-gold), #b88935);
+    color: #17101f;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#applicationsList .job-card button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 18px rgba(245,196,81,0.2);
+}
+
+/* FOOTER */
+
+.footer {
+    background: #070811;
+    border-top: 1px solid var(--app-border);
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+.footer .container {
+    text-align: center;
+}
+
+.footer p {
+    color: var(--app-muted);
+    font-size: 14px;
+}
+
+/* ANIMATION */
+
+@keyframes appFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 700px) {
+    .navbar .container {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .navbar nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .navbar nav a {
+        font-size: 12px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    main.container {
+        padding-top: 35px !important;
+    }
+
+    #applicationsList {
+        grid-template-columns: 1fr;
+    }
+
+    #applicationsList .job-card {
+        padding: 20px;
+    }
+
+    #applicationsList h2 {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+/* =====================================
+   APPLICANT DETAILS UPGRADE
+===================================== */
+
+#applicationsList .job-card {
+    position: relative;
+    overflow: hidden;
+}
+
+#applicationsList .job-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(
+        90deg,
+        #7545e8,
+        #f5c451
+    );
+}
+
+#applicationsList .job-card h3 {
+    font-size: 21px;
+    margin-top: 8px;
+    color: #f5c451;
+}
+
+#applicationsList .job-card p {
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+#applicationsList .job-card select {
+    margin-top: 15px;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+#applicationsList .job-card select:hover {
+    border-color: #f5c451;
+}
+
+/* UPDATE BUTTON */
+
+#applicationsList .job-card button {
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+/* CONTACT APPLICANT BUTTON */
+
+#applicationsList .job-card .btn-secondary {
+    background: linear-gradient(135deg, #7545e8, #5228b7);
+    color: #ffffff;
+    padding: 13px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+#applicationsList .job-card .btn-secondary:hover {
+    background: linear-gradient(135deg, #956cf5, #7545e8);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(117,69,232,0.25);
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    #applicationsList .job-card h3 {
+        font-size: 19px;
+    }
+
+    #applicationsList .job-card button,
+    #applicationsList .job-card .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+}

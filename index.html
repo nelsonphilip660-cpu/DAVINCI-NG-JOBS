@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DavinciJobs - Find jobs and connect with employers across Nigeria.">
+    <title>DavinciJobs | Find Your Next Opportunity</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- LOADER -->
+    <div id="loader">
+        <div class="loader-logo">D</div>
+        <h2>DAVINCIJOBS</h2>
+        <p>Connecting talent to opportunity</p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                DAVINCI<span>JOBS</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="company.html">For Companies</a>
+                <a href="subscription.html">Subscription</a>
+                <a href="my-applications.html">My Applications</a>
+                <a href="login.html" class="nav-login">Login</a>
+                <a href="register.html" class="nav-register">Get Started</a>
+                <a href="post-job.html" class="btn btn-primary">Post a Job</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content reveal">
+            <span class="hero-tag">YOUR CAREER STARTS HERE</span>
+
+            <h1>
+                Find Your Dream Job.
+                <span>Build Your Future.</span>
+            </h1>
+
+            <p>
+                Discover exciting employment opportunities
+                across Nigeria. Connect with trusted companies
+                and take the next step in your career.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="jobs.html" class="btn primary-btn">Explore Jobs</a>
+                <a href="register.html" class="btn secondary-btn">Create Account</a>
+            </div>
+
+            <div class="hero-stats">
+                <div>
+                    <h2>1000+</h2>
+                    <p>Opportunities</p>
+                </div>
+                <div>
+                    <h2>500+</h2>
+                    <p>Employers</p>
+                </div>
+                <div>
+                    <h2>24/7</h2>
+                    <p>Job Access</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-image reveal" aria-label="Featured job opportunities">
+            <div class="floating-card job-card-primary">
+                <div class="company-mark">DV</div>
+                <div class="job-card-copy">
+                    <span class="job-label">FEATURED ROLE</span>
+                    <strong>Product Designer</strong>
+                    <p>Davinci Labs · Lagos, Nigeria</p>
+                    <div class="job-meta"><span>Full time</span><span>₦450k–₦650k</span></div>
+                </div>
+            </div>
+            <div class="floating-card notification-card">
+                <span class="notification-icon">✓</span>
+                <div><strong>Application sent!</strong><p>Your profile is on its way.</p></div>
+            </div>
+            <div class="floating-card match-card">
+                <span class="match-score">92%</span>
+                <div><strong>Great match</strong><p>Your skills fit this role.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEARCH SECTION -->
+    <section class="search-section">
+        <h2>What job are you looking for?</h2>
+        <p>Search thousands of opportunities.</p>
+
+        <div class="search-box">
+            <input type="text" id="homeSearch" placeholder="Job title or keyword">
+
+            <input type="text" id="homeLocation" placeholder="Location e.g. Lagos">
+
+            <button onclick="searchHomeJobs()">Search Jobs</button>
+        </div>
+    </section>
+
+
+    <!-- NIGERIA RESOURCES -->
+    <section class="nigeria-showcase section-padding">
+        <div class="section-heading">
+            <span>OPPORTUNITIES ACROSS NIGERIA</span>
+            <h2>Connecting talent nationwide</h2>
+            <p>Explore opportunities in every part of the country.</p>
+        </div>
+        <div class="nigeria-media-grid">
+            <figure>
+                <img src="assets/images/nig.jpeg" alt="Map of Nigeria showing states and population density" loading="lazy">
+                <figcaption>Explore Nigeria by state</figcaption>
+            </figure>
+            <video controls preload="metadata" poster="assets/images/nigg.jpg" aria-label="Video about Nigeria">
+                <source src="assets/video/WhatsApp Video 2026-11-05 at 12.24.56.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+    <!-- CATEGORIES -->
+    <section class="categories section-padding">
+        <div class="section-heading">
+            <span>EXPLORE CAREERS</span>
+            <h2>Popular Job Categories</h2>
+        </div>
+
+        <div class="category-grid">
+            <div class="category-card">
+                <div>💻</div>
+                <h3>Technology</h3>
+                <p>Software, IT and digital careers</p>
+            </div>
+
+            <div class="category-card">
+                <div>🏥</div>
+                <h3>Healthcare</h3>
+                <p>Medical and healthcare jobs</p>
+            </div>
+
+            <div class="category-card">
+                <div>🏦</div>
+                <h3>Finance</h3>
+                <p>Banking and accounting</p>
+            </div>
+
+            <div class="category-card">
+                <div>📚</div>
+                <h3>Education</h3>
+                <p>Teaching and academic jobs</p>
+            </div>
+
+            <div class="category-card">
+                <div>🏗️</div>
+                <h3>Engineering</h3>
+                <p>Technical opportunities</p>
+            </div>
+
+            <div class="category-card">
+                <div>🛍️</div>
+                <h3>Sales</h3>
+                <p>Marketing and customer service</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED JOBS -->
+    <section class="featured-jobs section-padding">
+        <div class="section-heading">
+            <span>CAREER OPPORTUNITIES</span>
+            <h2>Featured Jobs</h2>
+            <p>Discover opportunities from employers.</p>
+        </div>
+
+        <div class="job-grid" id="featuredJobs">
+            <div class="job-card">
+                <span class="job-type">Full Time</span>
+                <h3>Frontend Developer</h3>
+                <p>Technology Company</p>
+                <p>📍 Lagos, Nigeria</p>
+                <a href="jobs.html">View Opportunities →</a>
+            </div>
+
+            <div class="job-card">
+                <span class="job-type">Part Time</span>
+                <h3>Customer Service Officer</h3>
+                <p>Business Company</p>
+                <p>📍 Ikeja, Lagos</p>
+                <a href="jobs.html">View Opportunities →</a>
+            </div>
+
+            <div class="job-card">
+                <span class="job-type">Full Time</span>
+                <h3>Accountant</h3>
+                <p>Financial Services</p>
+                <p>📍 Abuja, Nigeria</p>
+                <a href="jobs.html">View Opportunities →</a>
+            </div>
+        </div>
+
+        <a href="jobs.html" class="btn primary-btn">View All Jobs</a>
+    </section>
+
+    <!-- EMPLOYERS -->
+    <section class="employer-section">
+        <div>
+            <span>FOR EMPLOYERS</span>
+            <h2>Looking for talented employees?</h2>
+            <p>
+                Register your company, publish vacancies
+                and connect with qualified job seekers.
+            </p>
+            <a href="company.html" class="btn primary-btn">
+                Register Your Company
+            </a>
+            <a href="login.html" class="btn secondary-btn">Employer Login / Dashboard</a>
+        </div>
+    </section>
+
+    <!-- SUBSCRIPTION -->
+    <section class="subscription-preview section-padding">
+        <div class="section-heading">
+            <span>UNLOCK OPPORTUNITIES</span>
+            <h2>Affordable Monthly Access</h2>
+            <p>Access the DavinciJobs job-seeker platform.</p>
+        </div>
+
+        <div class="price-card">
+            <h3>Monthly Membership</h3>
+            <h2>₦2,000<span>/month</span></h2>
+
+            <ul>
+                <li>✓ Access job listings</li>
+                <li>✓ Discover nearby opportunities</li>
+                <li>✓ Connect with employers</li>
+                <li>✓ Apply for available jobs</li>
+            </ul>
+
+            <a href="subscription.html" class="btn primary-btn">
+                Subscribe Now
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h2>DAVINCI<span>JOBS</span></h2>
+                <p>Connecting talent to opportunity.</p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="register.html">Register</a>
+                <a href="company.html">Companies</a>
+                <a href="employer-dashboard.html">Employer Dashboard</a>
+                <a href="subscription.html">Membership</a>
+            </div>
+
+            <div>
+                <h3>Account</h3>
+                <a href="login.html">Login</a>
+                <a href="my-applications.html">My Applications</a>
+                <a href="register.html">Create Account</a>
+                <a href="admin.html">Admin</a>
+            </div>
+        </div>
+
+        <p class="copyright">
+            © 2026 DavinciJobs. All rights reserved.
+        </p>
+    </footer>
+    <script src="js/jobs.js" type="module"></script>
+    <script src="js/auth.js" type="module"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | DavinciJobs</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .admin-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .admin-heading {
+            color: #f5c451;
+            margin-bottom: 10px;
+        }
+
+        .admin-intro {
+            color: #a6abc0;
+            margin-bottom: 30px;
+        }
+
+        .admin-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 18px;
+            margin-bottom: 35px;
+        }
+
+        .admin-stat {
+            background: #121629;
+            padding: 22px;
+            border: 1px solid #292e48;
+            border-radius: 12px;
+        }
+
+        .admin-stat h3 {
+            color: #a6abc0;
+            font-size: 14px;
+        }
+
+        .admin-stat strong {
+            display: block;
+            color: #f5c451;
+            font-size: 28px;
+            margin-top: 10px;
+        }
+
+        .admin-section {
+            background: #121629;
+            border: 1px solid #292e48;
+            border-radius: 12px;
+            padding: 22px;
+            margin-bottom: 25px;
+            overflow-x: auto;
+        }
+
+        .admin-section h2 {
+            color: #f5c451;
+            margin-bottom: 18px;
+        }
+
+        .admin-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 650px;
+        }
+
+        .admin-table th,
+        .admin-table td {
+            padding: 13px;
+            text-align: left;
+            border-bottom: 1px solid #292e48;
+            color: #fff;
+        }
+
+        .admin-table th {
+            color: #f5c451;
+        }
+
+        .admin-action {
+            padding: 8px 12px;
+            margin: 3px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .approve-btn {
+            background: #168a55;
+            color: white;
+        }
+
+        .reject-btn {
+            background: #c43d4b;
+            color: white;
+        }
+
+        .receipt-link {
+            color: #f5c451;
+        }
+
+        .admin-message {
+            color: #a6abc0;
+            margin-top: 10px;
+        }
+
+        #adminLogout {
+            background: #7545e8;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">DAVINCI<span>JOBS</span></a>
+
+        <nav id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="jobs.html">Find Jobs</a>
+            <a href="admin.html">Admin</a>
+          <button type="button" id="adminLogout">Logout</button>
+        </nav>
+    </header>
+
+    <main class="admin-container">
+
+        <h1 class="admin-heading">Admin Dashboard</h1>
+
+        <p class="admin-intro">
+            Manage companies, job vacancies, payments and users.
+        </p>
+
+        <div class="admin-stats">
+
+            <div class="admin-stat">
+                <h3>Total Companies</h3>
+                <strong id="totalCompanies">0</strong>
+            </div>
+
+            <div class="admin-stat">
+                <h3>Pending Jobs</h3>
+                <strong id="pendingJobs">0</strong>
+            </div>
+
+            <div class="admin-stat">
+                <h3>Pending Payments</h3>
+                <strong id="pendingPayments">0</strong>
+            </div>
+
+            <div class="admin-stat">
+                <h3>Total Users</h3>
+                <strong id="totalUsers">0</strong>
+            </div>
+
+        </div>
+
+        <section class="admin-section">
+
+            <h2>Company Approvals</h2>
+
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Email</th>
+                        <th>Location</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="companiesTable">
+                    <tr>
+                        <td colspan="5">Loading companies...</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <section class="admin-section">
+
+            <h2>Job Approvals</h2>
+
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Job Title</th>
+                        <th>Company</th>
+                        <th>Location</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="jobsTable">
+                    <tr>
+                        <td colspan="5">Loading jobs...</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <section class="admin-section">
+
+            <h2>Payment Verification</h2>
+
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Payer</th>
+                        <th>Email</th>
+                        <th>Amount</th>
+                        <th>Receipt</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="paymentsTable">
+                    <tr>
+                        <td colspan="6">Loading payments...</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <section class="admin-section">
+
+            <h2>Registered Users</h2>
+
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Subscription</th>
+                    </tr>
+                </thead>
+
+                <tbody id="usersTable">
+                    <tr>
+                        <td colspan="4">Loading users...</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <p id="adminMessage" class="admin-message"></p>
+
+    </main>
+
+   
+     <script type="module" src="js/admin.js"></script>
+
+</body>
+
+</html>     
